@@ -23,15 +23,14 @@ RUN python3 -m pip install --no-cache-dir --upgrade pip pwntools && \
 RUN wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh 
 
 RUN wget -q -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-RUN chsh -s /bin/zsh
+# RUN chsh -s /bin/zsh
 
 ENV LANG C.UTF-8
 
 COPY bin/flag.txt /flag.txt
-COPY install/* /
 RUN mkdir -p /root/.cache
 WORKDIR /pwn
 # COPY bin/nightmare nightmare
 
 
-CMD ["/bin/zsh"]
+CMD ["/bin/bash"]
