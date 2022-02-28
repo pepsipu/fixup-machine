@@ -83,11 +83,11 @@ def conn():
     return gdb.debug([exe.path])
 
 
-ld.address = 0x271000 - 0x10
-libc.address = 0x43000 - 0x10
+ld.address = 0x246000 - 0x10
+libc.address = 0x44000 - 0x10
 
-binary_map = link_map(0x36220)
-ld_map = link_map(0x35A48)
+binary_map = link_map(0x33260)
+ld_map = link_map(0x32A70)
 
 _rtld_global = rtld_global(ld.symbols["_rtld_global"])
 
