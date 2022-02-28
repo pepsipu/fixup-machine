@@ -1,0 +1,4 @@
+/* GNU ld script
+*/
+OUTPUT_FORMAT(elf64-x86-64)
+GROUP ( /home/vagrant/glibc/build/install/lib/libm-2.34.a /home/vagrant/glibc/build/install/lib/libmvec.a )
